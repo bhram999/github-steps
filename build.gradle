@@ -1,5 +1,6 @@
 plugins {
-  id 'org.jenkins-ci.jpi' version '0.25.0'
+    id 'org.jenkins-ci.jpi' version '0.25.0'
+    id 'groovy'
 }
 
 group = 'org.jenkins-ci.plugins'
@@ -8,7 +9,7 @@ description = 'A description of your plugin'
 
 jenkinsPlugin {
     // version of Jenkins core this plugin depends on, must be 1.420 or later
-    coreVersion = '2.102'
+    coreVersion = '2.63'
 
     // ID of the plugin, defaults to the project name without trailing '-plugin'
     shortName = 'github-steps'
@@ -27,6 +28,17 @@ jenkinsPlugin {
 
     // plugin file extension, either 'jpi' or 'hpi', defaults to 'hpi'
     fileExtension = 'hpi'
+
+    repositories {
+        mavenCentral()
+    }
+
+    dependencies {
+        compile 'org.codehaus.groovy.modules.http-builder:http-builder:0.7.1'
+        compile 'org.codehaus.groovy:groovy-all:2.4.10'
+        compile 'org.apache.ivy:ivy:2.4.0'
+        testCompile 'junit:junit:4.12'
+    }
 
     // the developers section is optional, and corresponds to the POM developers section
     developers {
