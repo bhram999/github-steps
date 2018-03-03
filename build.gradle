@@ -35,6 +35,8 @@ jenkinsPlugin {
 
     dependencies {
         compile 'org.codehaus.groovy.modules.http-builder:http-builder:0.7.1'
+        compile 'com.squareup.okhttp3:okhttp:3.9.0'
+
         compile 'org.codehaus.groovy:groovy-all:2.4.10'
         compile 'org.apache.ivy:ivy:2.4.0'
         testCompile 'junit:junit:4.12'
