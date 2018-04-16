@@ -148,7 +148,7 @@ class Site extends AbstractDescribableImpl<Site> {
 
             try {
                 final GithubService service = new GithubService(site)
-                final response = service.query(["query":"{ __typename }"])
+                final response = service.queryV4(["query":"{ __typename }"])
                 if (response.isSuccessful()) {
                     return FormValidation.ok("Success: " + response.getMessage().toString())
                 } else {
@@ -215,8 +215,7 @@ class Site extends AbstractDescribableImpl<Site> {
 
             try {
                 final GithubService service = new GithubService(site)
-                final response = service.query(["query":"{ __typename }"])
-//                final response = service.query({ __typename })
+                final response = service.queryV4(["query":"{ __typename }"])
                 if (response.isSuccessful()) {
                     return FormValidation.ok("Success: " + response.getMessage().toString())
                 } else {

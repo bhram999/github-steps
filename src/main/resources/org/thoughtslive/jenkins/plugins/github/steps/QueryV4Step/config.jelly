@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?jelly escape-by-default='true'?>
+<j:jelly
+  xmlns:f="/lib/form"
+  xmlns:j="jelly:core">
+  <f:entry field="query" title="V4 Query">
+    <f:textbox/>
+  </f:entry>
+  <f:advanced>
+    <f:entry field="site" title="Site Name">
+      <f:select/>
+    </f:entry>
+    <f:entry field="failOnError">
+      <f:checkbox default="true" title="Fail On Error"/>
+    </f:entry>
+  </f:advanced>
+  <f:block>
+    <p>See <a href="https://jenkinsci.github.io/jira-steps-plugin/steps/comment/jira_add_comment/"
+      target="_blank">QueryV4
+    </a> for more information.
+    </p>
+  </f:block>
+</j:jelly>

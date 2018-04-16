@@ -74,6 +74,8 @@ jenkinsPlugin {
 
     dependencies {
         'org.connectbot.jbcrypt:jbcrypt:1.0.0'
+        compile group: 'org.jenkins-ci.plugins', name: 'structs', version: '1.14', ext: 'jar'
+        compile group: 'org.jenkins-ci.plugins.workflow', name: 'workflow-step-api', version: '2.13', ext: 'jar'
         compile 'com.squareup.okhttp3:okhttp:3.9.0'
         compile 'org.projectlombok:lombok:1.16.20'
         compile 'org.kohsuke.stapler:stapler:1.223'

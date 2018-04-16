@@ -49,4 +49,26 @@ class Common {
         }
         return throwable
     }
+
+    /**
+     * Write a message to the given print stream.
+     *
+     * @param logger {@link PrintStream}
+     * @param message to log.
+     */
+    static void log(final PrintStream logger, final Object message) {
+        if (logger != null) {
+            logger.println(message)
+        }
+    }
+
+    /**
+     * Empty check for string.
+     *
+     * @return true if given string is null or empty.
+     */
+    static boolean empty(final String str) {
+        return str == null || str.trim().isEmpty()
+    }
+
 }

@@ -8,6 +8,7 @@ import com.fasterxml.jackson.datatype.joda.JodaModule
 import java.util.concurrent.TimeUnit
 import okhttp3.ConnectionPool
 import okhttp3.OkHttpClient
+import org.thoughtslive.jenkins.plugins.github.api.ResponseData
 import org.thoughtslive.jenkins.plugins.github.Site
 import org.thoughtslive.jenkins.plugins.github.login.SigningInterceptor
 
@@ -42,7 +43,7 @@ class GithubService {
     /**
      * @return github graphql response.
      */
-    public query(json) {
+    ResponseData<Object> queryV4(json) {
         try {
             return parseResponse(githubV4EndPoints.queryV4(json).execute())
         } catch (Exception e) {
